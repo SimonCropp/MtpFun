@@ -116,6 +116,22 @@ The following properties are common across all test frameworks when using MTP:
 <!-- endSnippet -->
 
 
+### Problems
+
+Omitting `<EnableNUnitRunner>true</EnableNUnitRunner>` gives
+
+```
+global.json defines test runner to be Microsoft.Testing.Platform. All projects must use that test runner.
+The following test projects are using VSTest test runner:
+NUnitTests.csproj
+
+See https://aka.ms/dotnet-test/mtp for more information.
+Get projects properties with MSBuild didn't execute properly with exit code: 1.
+```
+
+But https://aka.ms/dotnet-test/mtp does not tell yo how to fix the problem.
+
+
 ## MSTest
 
 [MSTest has native MTP support via the MSTest runner](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-runner-intro).
@@ -140,6 +156,22 @@ The following properties are common across all test frameworks when using MTP:
 <!-- endSnippet -->
 
 
+### Problems
+
+Omitting `<EnableMSTestRunner>true</EnableMSTestRunner>` gives
+
+```
+global.json defines test runner to be Microsoft.Testing.Platform. All projects must use that test runner.
+The following test projects are using VSTest test runner:
+MSTestTests.csproj
+
+See https://aka.ms/dotnet-test/mtp for more information.
+Get projects properties with MSBuild didn't execute properly with exit code: 1.
+```
+
+But https://aka.ms/dotnet-test/mtp does not tell yo how to fix the problem.
+
+
 ## TUnit
 
 [TUnit is built natively on MTP](https://thomhurst.github.io/TUnit/).
@@ -159,3 +191,55 @@ The following properties are common across all test frameworks when using MTP:
 ```
 <sup><a href='/TUnitTests/TUnitTests.csproj#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-TUnitTests/TUnitTests.csproj' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+
+## dotnet test
+
+`dotnet test` in the solution directory works as expected:
+
+
+```
+C:\Code\MtpFun>dotnet test
+Running tests from XunitV3Tests\bin\Debug\net10.0\XunitV3Tests.dll (net10.0|x64)
+Running tests from NUnitTests\bin\Debug\net10.0\NUnitTests.dll (net10.0|x64)
+Running tests from MSTestTests\bin\Debug\net10.0\MSTestTests.dll (net10.0|x64)
+Running tests from TUnitTests\bin\Debug\net10.0\TUnitTests.dll (net10.0|x64)
+MSTestTests\bin\Debug\net10.0\MSTestTests.dll (net10.0|x64) passed (448ms)
+NUnitTests\bin\Debug\net10.0\NUnitTests.dll (net10.0|x64) passed (647ms)
+TUnitTests\bin\Debug\net10.0\TUnitTests.dll (net10.0|x64) passed (633ms)
+XunitV3Tests\bin\Debug\net10.0\XunitV3Tests.dll (net10.0|x64) passed (756ms)
+
+Test run summary: Passed!
+  TUnitTests\bin\Debug\net10.0\TUnitTests.dll (net10.0|x64) passed (633ms)
+  MSTestTests\bin\Debug\net10.0\MSTestTests.dll (net10.0|x64) passed (448ms)
+  NUnitTests\bin\Debug\net10.0\NUnitTests.dll (net10.0|x64) passed (647ms)
+  XunitV3Tests\bin\Debug\net10.0\XunitV3Tests.dll (net10.0|x64) passed (756ms)
+
+  total: 4
+  failed: 0
+  succeeded: 4
+  skipped: 0
+  duration: 1s 220ms
+```
+
+
+`dotnet test directory` does not:
+
+
+```
+C:\Code>dotnet test C:\Code\MtpFun
+Restore complete (2.4s)
+  TUnitTests net10.0 failed with 1 error(s) (0.0s)
+    C:\Users\simon\.nuget\packages\microsoft.testing.platform.msbuild\2.1.0\buildMultiTargeting\Microsoft.Testing.Platform.MSBuild.targets(263,5): error Testing with VSTest target is no longer supported by Microsoft.Testing.Platform on .NET 10 SDK and later. If you use dotnet test, you should opt-in to the new dotnet test experience. For more information, see https://aka.ms/dotnet-test-mtp-error
+  MSTestTests net10.0 failed with 1 error(s) (0.0s)
+    C:\Users\simon\.nuget\packages\microsoft.testing.platform.msbuild\2.1.0\buildMultiTargeting\Microsoft.Testing.Platform.MSBuild.targets(263,5): error Testing with VSTest target is no longer supported by Microsoft.Testing.Platform on .NET 10 SDK and later. If you use dotnet test, you should opt-in to the new dotnet test experience. For more information, see https://aka.ms/dotnet-test-mtp-error
+  NUnitTests net10.0 succeeded (0.6s) → MtpFun\NUnitTests\bin\Debug\net10.0\NUnitTests.dll
+NUnit Adapter 5.2.0.0: Test execution started
+Running all tests in C:\Code\MtpFun\NUnitTests\bin\Debug\net10.0\NUnitTests.dll
+   NUnit3TestExecutor discovered 1 of 1 NUnit test cases using Current Discovery mode, Non-Explicit run
+NUnit Adapter 5.2.0.0: Test execution complete
+  NUnitTests test net10.0 succeeded (2.1s)
+
+Test summary: total: 1, failed: 0, succeeded: 1, skipped: 0, duration: 2.0s
+Build failed with 2 error(s) in 5.5s
+```
