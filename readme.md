@@ -243,3 +243,18 @@ NUnit Adapter 5.2.0.0: Test execution complete
 Test summary: total: 1, failed: 0, succeeded: 1, skipped: 0, duration: 2.0s
 Build failed with 2 error(s) in 5.5s
 ```
+
+
+## TestingPlatformDotnetTestSupport
+
+regarding the `<TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>` setting 
+
+This [unit-testing-with-dotnet-test](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) says
+
+> It is highly recommended to set the TestingPlatformDotnetTestSupport property in Directory.Build.props.
+
+But [dotnet-test-with-mtp](https://devblogs.microsoft.com/dotnet/dotnet-test-with-mtp/) says
+
+> With native MTP integration in .NET 10, several MSBuild properties from the previous approach are no longer needed and can be safely removed from your test projects: TestingPlatformDotnetTestSupport: No longer required for MTP integration. TestingPlatformShowTestsFailure: Obsolete, as test failures are now displayed by default in the new experience
+
+I have found it not to be necessary.
