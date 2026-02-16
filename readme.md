@@ -8,7 +8,7 @@ Sample projects demonstrating how to configure [Microsoft.Testing.Platform (MTP)
 
 ### global.json
 
-The [test runner configuration](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-integration-dotnet-test#globaltest-runner) sets MTP as the default test runner. This is [required in the repository root](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-intro?tabs=continuous-integration#run-and-debug-tests) for CI environments using the Azure DevOps `DotNetCoreCLI` task with the `test` command.
+The [test runner configuration](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-integration-dotnet-test#globaltest-runner) sets MTP as the default test runner.
 
 <!-- snippet: global.json -->
 <a id='snippet-global.json'></a>
@@ -26,6 +26,8 @@ The [test runner configuration](https://learn.microsoft.com/en-us/dotnet/core/te
 ```
 <sup><a href='/global.json#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-global.json' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+This is [required in the repository root](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-intro?tabs=continuous-integration#run-and-debug-tests) for CI environments using the Azure DevOps `DotNetCoreCLI` task with the `test` command.
 
 
 ### Directory.Packages.props
