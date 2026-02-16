@@ -3,7 +3,6 @@
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-    <RootNamespace>EfLocalDb.TUnit.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="TUnit" />

@@ -4,7 +4,6 @@
     <OutputType>Exe</OutputType>
     <EnableMSTestRunner>true</EnableMSTestRunner>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-    <RootNamespace>EfLocalDb.MSTest.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MSTest" />

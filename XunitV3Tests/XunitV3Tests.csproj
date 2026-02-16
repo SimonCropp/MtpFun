@@ -4,7 +4,6 @@
     <OutputType>Exe</OutputType>
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
     <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
-    <RootNamespace>EfLocalDb.Xunit.V3.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="xunit.v3" />
