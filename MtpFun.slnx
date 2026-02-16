@@ -1,5 +1,7 @@
 <Solution>
   <Folder Name="/SolutionFolder/">
+    <File Path=".github/workflows/ci.yml" />
+    <File Path="appveyor.yml" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
