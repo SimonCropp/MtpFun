@@ -46,15 +46,14 @@ This is [required in the repository root](https://learn.microsoft.com/en-us/dotn
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageVersion Include="NUnit" Version="4.4.0" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.2.0" Pinned="true" />
-    <PackageVersion Include="System.Memory" Version="4.6.3" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="MSTest" Version="4.1.0" />
-    <PackageVersion Include="TUnit" Version="1.13.60" />
+    <PackageVersion Include="TUnit" Version="1.15.0" />
   </ItemGroup>
 </Project>
 ```
-<sup><a href='/Directory.Packages.props#L1-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-Directory.Packages.props' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Directory.Packages.props#L1-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-Directory.Packages.props' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
