@@ -65,7 +65,7 @@ The following properties are common across all test frameworks when using MTP:
 
 ## xUnit v3
 
-[xUnit v3](https://xunit.net/docs/getting-started/v3/cmdline) has built-in support for MTP.
+[xUnit v3 has built-in support for MTP](https://xunit.net/docs/getting-started/v3/cmdline).
 
  * [`UseMicrosoftTestingPlatformRunner`](https://xunit.net/docs/configuration-files#useMicrosoftTestingPlatformRunner) set to `true`. Enables the MTP runner for xUnit v3.
 
@@ -89,9 +89,11 @@ The following properties are common across all test frameworks when using MTP:
 
 ## NUnit
 
-[NUnit](https://docs.nunit.org/articles/vs-test-adapter/MTP.html) supports MTP via the NUnit runner.
+[NUnit supports MTP via the NUnit runner](https://docs.nunit.org/articles/vs-test-adapter/NUnit-And-Microsoft-Test-Platform.html).
 
- * [`EnableNUnitRunner`](https://docs.nunit.org/articles/vs-test-adapter/MTP.html) set to `true`. Enables the MTP runner for NUnit.
+ * [`EnableNUnitRunner`](https://docs.nunit.org/articles/vs-test-adapter/NUnit-And-Microsoft-Test-Platform.html) set to `true`. Enables the MTP runner for NUnit.
+ * [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter) version 5.0 or greater is required. It contains the MTP integration layer for NUnit.
+ * [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk) is required to provide the MTP infrastructure and auto-generate the entry point.
 
 <!-- snippet: NUnitTests/NUnitTests.csproj -->
 <a id='snippet-NUnitTests/NUnitTests.csproj'></a>
@@ -115,7 +117,7 @@ The following properties are common across all test frameworks when using MTP:
 
 ## MSTest
 
-[MSTest](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-runner-intro) has native MTP support via the MSTest runner.
+[MSTest has native MTP support via the MSTest runner](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-runner-intro).
 
  * [`EnableMSTestRunner`](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-mstest-runner-intro#enable-mstest-runner) set to `true`. Enables the MTP runner for MSTest.
 
@@ -139,7 +141,7 @@ The following properties are common across all test frameworks when using MTP:
 
 ## TUnit
 
-[TUnit](https://thomhurst.github.io/TUnit/) is built natively on MTP. No additional runner property is needed.
+[TUnit is built natively on MTP](https://thomhurst.github.io/TUnit/).
 
 <!-- snippet: TUnitTests/TUnitTests.csproj -->
 <a id='snippet-TUnitTests/TUnitTests.csproj'></a>
