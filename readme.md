@@ -61,7 +61,6 @@ The [test runner configuration](https://learn.microsoft.com/en-us/dotnet/core/te
 The following properties are common across all test frameworks when using MTP:
 
  * [`OutputType`](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/msbuild-props#outputtype) set to `Exe`. MTP requires test projects to be executable.
- * [`TestingPlatformDotnetTestSupport`](https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-integration-dotnet-test#testingplatformdotnettestsupport) set to `true`. Enables `dotnet test` integration with MTP.
 
 
 ## xUnit v3
@@ -78,14 +77,13 @@ The following properties are common across all test frameworks when using MTP:
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
-    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="xunit.v3" />
   </ItemGroup>
 </Project>
 ```
-<sup><a href='/XunitV3Tests/XunitV3Tests.csproj#L1-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitV3Tests/XunitV3Tests.csproj' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/XunitV3Tests/XunitV3Tests.csproj#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-XunitV3Tests/XunitV3Tests.csproj' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -103,7 +101,6 @@ The following properties are common across all test frameworks when using MTP:
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <EnableNUnitRunner>true</EnableNUnitRunner>
-    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
@@ -112,7 +109,7 @@ The following properties are common across all test frameworks when using MTP:
   </ItemGroup>
 </Project>
 ```
-<sup><a href='/NUnitTests/NUnitTests.csproj#L1-L13' title='Snippet source file'>snippet source</a> | <a href='#snippet-NUnitTests/NUnitTests.csproj' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/NUnitTests/NUnitTests.csproj#L1-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-NUnitTests/NUnitTests.csproj' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -130,14 +127,13 @@ The following properties are common across all test frameworks when using MTP:
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <EnableMSTestRunner>true</EnableMSTestRunner>
-    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MSTest" />
   </ItemGroup>
 </Project>
 ```
-<sup><a href='/MSTestTests/MSTestTests.csproj#L1-L11' title='Snippet source file'>snippet source</a> | <a href='#snippet-MSTestTests/MSTestTests.csproj' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/MSTestTests/MSTestTests.csproj#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-MSTestTests/MSTestTests.csproj' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -152,12 +148,11 @@ The following properties are common across all test frameworks when using MTP:
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="TUnit" />
   </ItemGroup>
 </Project>
 ```
-<sup><a href='/TUnitTests/TUnitTests.csproj#L1-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-TUnitTests/TUnitTests.csproj' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/TUnitTests/TUnitTests.csproj#L1-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-TUnitTests/TUnitTests.csproj' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
