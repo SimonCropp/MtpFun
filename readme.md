@@ -129,7 +129,7 @@ See https://aka.ms/dotnet-test/mtp for more information.
 Get projects properties with MSBuild didn't execute properly with exit code: 1.
 ```
 
-But https://aka.ms/dotnet-test/mtp does not tell yo how to fix the problem.
+But https://aka.ms/dotnet-test/mtp does not tell you how to fix the problem.
 
 
 ## MSTest
@@ -169,7 +169,7 @@ See https://aka.ms/dotnet-test/mtp for more information.
 Get projects properties with MSBuild didn't execute properly with exit code: 1.
 ```
 
-But https://aka.ms/dotnet-test/mtp does not tell yo how to fix the problem.
+But https://aka.ms/dotnet-test/mtp does not tell you how to fix the problem.
 
 
 ## TUnit
