@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/SolutionFolder/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="MSTestTests/MSTestTests.csproj" />
+  <Project Path="NUnitTests/NUnitTests.csproj" />
+  <Project Path="TUnitTests/TUnitTests.csproj" />
+  <Project Path="XunitV3Tests/XunitV3Tests.csproj" />
+</Solution>
