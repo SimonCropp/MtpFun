@@ -4,6 +4,7 @@
     <File Path="appveyor.yml" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
   </Folder>
   <Project Path="MSTestTests/MSTestTests.csproj" />
   <Project Path="NUnitTests/NUnitTests.csproj" />
