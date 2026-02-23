@@ -94,7 +94,7 @@ The following properties are common across all test frameworks when using MTP:
 
  * [`EnableNUnitRunner`](https://docs.nunit.org/articles/vs-test-adapter/NUnit-And-Microsoft-Test-Platform.html) set to `true`. Enables the MTP runner for NUnit.
  * [NUnit3TestAdapter](https://www.nuget.org/packages/NUnit3TestAdapter) version 5.0 or greater is required. It contains the MTP integration layer for NUnit.
- * [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk) is required to provide the MTP infrastructure and auto-generate the entry point.
+ * [Microsoft.NET.Test.Sdk](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk) is technically not required. It is a workaround for a bug in Rider https://youtrack.jetbrains.com/issue/RIDER-131530.
 
 <!-- snippet: NUnitTests/NUnitTests.csproj -->
 <a id='snippet-NUnitTests/NUnitTests.csproj'></a>
