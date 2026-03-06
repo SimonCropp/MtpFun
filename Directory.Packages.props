@@ -5,11 +5,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
-    <PackageVersion Include="NUnit" Version="4.5.0" />
+    <PackageVersion Include="NUnit" Version="4.5.1" />
     <PackageVersion Include="NUnit3TestAdapter" Version="6.1.0" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="MSTest" Version="4.1.0" />
-    <PackageVersion Include="TUnit" Version="1.18.21" />
+    <PackageVersion Include="TUnit" Version="1.19.0" />
   </ItemGroup>
 </Project>
